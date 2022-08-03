@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class StudentServce extends ServiceImpl<StudentMapper,Student> implements StudentServceInterface {
+public class StudentService extends ServiceImpl<StudentMapper,Student> implements StudentServiceInterface {
     @Autowired
     private StudentMapper studentMapper;
 
     @Override
-    public List<Student> select(Student stu) {
+    public List<Student> select(Student student) {
         return studentMapper.selectList(null);
     }
 }

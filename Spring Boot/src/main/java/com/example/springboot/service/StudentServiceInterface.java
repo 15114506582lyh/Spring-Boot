@@ -5,6 +5,6 @@ import com.example.springboot.domain.Student;
 
 import java.util.List;
 
-public interface StudentServceInterface extends IService<Student> {
-    List<Student> select(Student stu);
+public interface StudentServiceInterface extends IService<Student> {
+    List<Student> select(Student student);
 }
