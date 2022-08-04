@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface StudentsServiceInterface extends IService<Students> {
     List<Students> select(Students students);
+    Students getCacheById(Long sid);
 }
