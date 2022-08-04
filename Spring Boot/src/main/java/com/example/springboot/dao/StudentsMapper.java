@@ -5,6 +5,4 @@ import com.example.springboot.domain.Students;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface StudentsMapper extends BaseMapper<Students> {
-
-}
+public interface StudentsMapper extends BaseMapper<Students> {}
