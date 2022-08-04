@@ -1,6 +1,9 @@
 package com.example.springboot.domain;
 
-public class Student {
+import lombok.Data;
+
+@Data
+public class Students {
     private Integer sid;
     private String sname;
     private String sex;
