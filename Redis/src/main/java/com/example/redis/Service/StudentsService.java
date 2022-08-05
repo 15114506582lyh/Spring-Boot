@@ -14,16 +14,11 @@ import java.util.List;
 @Service
 @CacheConfig(cacheNames = "Students")
 public class StudentsService extends ServiceImpl<StudentsMapper, Students> implements StudentsServiceInterface {
-    @Autowired
-    private StudentsMapper studentsMapper;
 
+    //根据id查询
     @Override
-    public List<Students> select(Students students) {
-        return studentsMapper.selectList(null);
-    }
-    @Override
-    @Cacheable(key="#sid")
-    public Students getCacheById(Long sid){
-        return getById(sid);
+    @Cacheable(key="#id")
+    public Students GetById(Long id){
+        return getById(id);
     }
 }
