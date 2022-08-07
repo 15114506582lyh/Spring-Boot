@@ -3,6 +3,7 @@ package com.example.redis.Controller;
 import com.example.redis.Domain.Students;
 import com.example.redis.Service.StudentsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.ReturnedType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,5 +31,10 @@ public class StudentsController{
     @DeleteMapping("{id}")
     public boolean delete(@PathVariable("id") Long id){
         return studentsService.removeById(id);
+    }
+    //更新用户
+    @PutMapping("Update")
+    public boolean update(@RequestBody Students students){
+        return studentsService.updateById(students);
     }
 }
